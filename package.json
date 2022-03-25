@@ -2,17 +2,24 @@
   "name": "portifolio",
   "version": "1.0.0",
   "description": "Portifólio",
-  "homepage":"./",
+  "homepage": "./",
   "main": "./build/index.js",
   "scripts": {
     "dev": "webpack serve --open",
     "build": "node --trace-deprecation node_modules/webpack/bin/webpack.js"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/material": "^5.5.2",
+    "@mui/styled-engine-sc": "^5.5.2",
     "axios": "^0.26.1",
+    "id-unique-protocol": "^1.1.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2",
+    "styled-components": "^5.3.5",
     "tsc": "^2.0.4",
     "typescript": "^4.6.2"
   },

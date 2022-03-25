@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(44, 63, 192);
+    align-items: center;
+}
+
+.nav_title {
+    font-size: 3pc;
+    transition: all ease 0.5s;
+    font-family: 'Bebas Neue', cursive;
+    margin-left: 20px;
+}
+
+.nav_title:hover {
+    transform: scale(1.1);
+    cursor: default;
+}
+
+.nav_option {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-right: 20px;
+    font-size: 1.7pc;
+    color: black
+}
