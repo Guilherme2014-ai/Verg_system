@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // Dependencies
 import React from "react";
 
@@ -28,17 +29,6 @@ const AllStudentsComponent = () => {
             students={students}
             componentFunc="show"
           />
-          <br />
-          <Link to="/alunos/novo">
-            <Button
-              variant="contained"
-              style={{
-                backgroundColor: "rgb(44, 63, 192)",
-              }}
-            >
-              Novo Aluno
-            </Button>
-          </Link>
         </div>
       ) : (
         <div
@@ -50,6 +40,16 @@ const AllStudentsComponent = () => {
         </div>
       )}
       <br />
+      <Link to="/alunos/novo">
+        <Button
+          variant="contained"
+          style={{
+            backgroundColor: "rgb(44, 63, 192)",
+          }}
+        >
+          Novo Aluno
+        </Button>
+      </Link>
     </div>
   );
 };

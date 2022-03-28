@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // Dependencies
 import React from "react";
 import { idUniqueV2 } from "id-unique-protocol";
