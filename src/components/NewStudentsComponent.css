@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.content_new_students {
+    border-radius: 10px;
+    padding: 20px;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: black 0px 5px 0px;
+    margin-top: 50px;
+}
+
+.input_text_new_students {
+    width: 100%;
+}

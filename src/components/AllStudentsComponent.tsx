@@ -1,9 +1,19 @@
+// Dependencies
 import React from "react";
+
+// Contect
 import { getStudentsContext } from "../context/studentsContext";
+
+// Modules
 import studentsGet from "../modules/studentsGet";
 
-import "./AllStudentsComponent.css";
+// Components
+import Button from "@mui/material/Button";
 import { PersonalizedTableComponent } from "./PersonalizedTableComponent";
+
+// CSS
+import "./AllStudentsComponent.css";
+import { Link } from "react-router-dom";
 
 const AllStudentsComponent = () => {
   const [stateStudents, setStudents] = getStudentsContext();
@@ -13,7 +23,23 @@ const AllStudentsComponent = () => {
   return (
     <div>
       {students ? (
-        <PersonalizedTableComponent students={students} componentFunc="show" />
+        <div>
+          <PersonalizedTableComponent
+            students={students}
+            componentFunc="show"
+          />
+          <br />
+          <Link to="/alunos/novo">
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "rgb(44, 63, 192)",
+              }}
+            >
+              Novo Aluno
+            </Button>
+          </Link>
+        </div>
       ) : (
         <div
           style={{
@@ -23,6 +49,7 @@ const AllStudentsComponent = () => {
           <h1>Sem Alunos</h1>
         </div>
       )}
+      <br />
     </div>
   );
 };

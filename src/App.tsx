@@ -12,6 +12,7 @@ import { studentsProviderContext } from "./context/studentsContext";
 import { NavComponent } from "./components/NavComponent";
 import { PresentListComponent } from "./components/PresentListComponent";
 import { AllStudentsComponent } from "./components/AllStudentsComponent";
+import { NewStudentsComponents } from "./components/NewStudentsComponent";
 
 const App: React.FC = () => {
   const studentsState: [IStudents[], Dispatch<IStudents[]>] = useState(null);
@@ -34,6 +35,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/alunos" element={<AllStudentsComponent />} />
           <Route path="/chamada" element={<PresentListComponent />} />
+          <Route path="/alunos/novo" element={<NewStudentsComponents />} />
           <Route
             path="/cronograma_de_aulas"
             element={<h1>Lista de horario</h1>}
