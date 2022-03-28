@@ -11,6 +11,7 @@ import { studentsProviderContext } from "./context/studentsContext";
 // Components
 import { NavComponent } from "./components/NavComponent";
 import { PresentListComponent } from "./components/PresentListComponent";
+import { AllStudentsComponent } from "./components/AllStudentsComponent";
 
 const App: React.FC = () => {
   const studentsState: [IStudents[], Dispatch<IStudents[]>] = useState(null);
@@ -19,9 +20,19 @@ const App: React.FC = () => {
     <studentsProviderContext.Provider value={studentsState}>
       <Router>
         <NavComponent
-          list={[{ title: "Lista de Chamada", link: "/chamada" }]}
+          list={[
+            {
+              title: "Lista de Chamada",
+              link: "/chamada",
+            },
+            {
+              title: "Alunos",
+              link: "/alunos",
+            },
+          ]}
         />
         <Routes>
+          <Route path="/alunos" element={<AllStudentsComponent />} />
           <Route path="/chamada" element={<PresentListComponent />} />
           <Route
             path="/cronograma_de_aulas"

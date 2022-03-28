@@ -8,7 +8,7 @@ const NavComponent = ({ list }: { list: INavOption[] }) => {
   return (
     <nav className="nav">
       <h1 className="nav_title">SV</h1>
-      <div>
+      <div className="options">
         {list &&
           list.map((option) => (
             <Link to={option.link}>

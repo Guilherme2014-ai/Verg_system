@@ -1,4 +1,10 @@
+// Dependencies
 import React from "react";
+
+// Interfaces
+import IStudents from "../interfaces/IStudents";
+
+// Components
 import {
   Avatar,
   Paper,
@@ -11,10 +17,11 @@ import {
 } from "@mui/material";
 import { idUniqueV2 } from "id-unique-protocol";
 
+// Contexts
 import { getStudentsContext } from "../context/studentsContext";
 
+// CSS
 import "./PresentListComponent.css";
-import IStudents from "../interfaces/IStudents";
 
 const PresentListComponent = () => {
   const [stateStudents, setStudents] = getStudentsContext();
