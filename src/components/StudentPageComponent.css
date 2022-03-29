@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.area_main_student_page {
+    display: flex;
+    justify-content: center;
+}
+
+.main_student_page {
+    background-color: rgb(0, 110, 255);
+    border-radius: 20px;
+    width: 600px;
+    padding: 40px;
+    text-align: center;
+    margin: 20px;
+    margin-top: 70px;
+}
+
+.student_content {
+    background-color: rgba(0,127,255,1);
+    text-align: start;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 7px;
+    border-radius: 9px;
+}
+
+img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    transition: all ease 0.3s;
+}
+
+img:hover {
+    transform: scale(1.01);
+}

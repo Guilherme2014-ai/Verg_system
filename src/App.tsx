@@ -1,6 +1,6 @@
 // Dependencies
 import React, { Dispatch, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 // Interfaces
 import IStudents from "./interfaces/IStudents";
