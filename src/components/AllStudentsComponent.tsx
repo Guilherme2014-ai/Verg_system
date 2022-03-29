@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // Dependencies
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Contect
 import { getStudentsContext } from "../context/studentsContext";
@@ -14,7 +15,6 @@ import { PersonalizedTableComponent } from "./PersonalizedTableComponent";
 
 // CSS
 import "./AllStudentsComponent.css";
-import { Link } from "react-router-dom";
 
 const AllStudentsComponent = () => {
   const [stateStudents, setStudents] = getStudentsContext();
@@ -22,7 +22,7 @@ const AllStudentsComponent = () => {
 
   const students = studentsGet(stateStudents, studentsLocalStorage);
   return (
-    <div>
+    <div className="all_students_main">
       {students ? (
         <div>
           <PersonalizedTableComponent

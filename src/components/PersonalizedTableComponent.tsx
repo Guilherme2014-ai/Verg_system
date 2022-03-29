@@ -64,6 +64,9 @@ const PersonalizedTableComponent = ({
             {componentFunc == "mark-present" && (
               <TableCell align="right">Presente</TableCell>
             )}
+            {componentFunc == "show" && (
+              <TableCell align="right">RA do Aluno</TableCell>
+            )}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -108,6 +111,9 @@ const PersonalizedTableComponent = ({
                     }
                   />
                 </TableCell>
+              )}
+              {componentFunc == "show" && (
+                <TableCell align="right">{student.RA}</TableCell>
               )}
             </TableRow>
           ))}

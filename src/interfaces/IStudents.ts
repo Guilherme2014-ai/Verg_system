@@ -5,4 +5,5 @@ export default interface IStudents {
   room: string;
   present: boolean;
   avatar?: string;
+  RA: string;
 }
