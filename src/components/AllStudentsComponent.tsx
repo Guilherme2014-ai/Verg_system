@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { getStudentsContext } from "../context/studentsContext";
 
 // Modules
-import studentsGet from "../modules/studentsGet";
+import studentsGet from "../modules/chooseStudentData";
 
 // Components
 import Button from "@mui/material/Button";

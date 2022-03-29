@@ -8,14 +8,18 @@ import { PersonalizedTableComponent } from "./PersonalizedTableComponent";
 // Contexts
 import { getStudentsContext } from "../context/studentsContext";
 
+// Modules
+import chooseStudentData from "../modules/chooseStudentData";
+import getStudentLocalStorage from "../modules/getStudentLocalStorage";
+
 // CSS
 import "./PresentListComponent.css";
-import studentsGet from "../modules/studentsGet";
 
 const PresentListComponent = () => {
   const [stateStudents, setStudents] = getStudentsContext();
-  const studentsLocalStorage = JSON.parse(localStorage.getItem("students"));
-  const students = studentsGet(stateStudents, studentsLocalStorage);
+  const studentsLocalStorage = getStudentLocalStorage();
+
+  const students = chooseStudentData(stateStudents, studentsLocalStorage);
 
   return (
     <div className="content">

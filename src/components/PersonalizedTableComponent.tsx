@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // Dependencies
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { idUniqueV2 } from "id-unique-protocol";
 
 // Components
@@ -31,7 +32,9 @@ const PersonalizedTableComponent = ({
   students: IStudents[];
   componentFunc: "show" | "mark-present";
 }) => {
+  const navigate = useNavigate();
   const [stateStudents, setStudents] = getStudentsContext();
+
   const imagesLink = {
     present:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_3RVRNirRIUZXPFC2QrD8S73fZlh71NgXg&usqp=CAU",
@@ -72,7 +75,11 @@ const PersonalizedTableComponent = ({
         <TableBody>
           {students.map((student) => (
             <TableRow
-              onClick={() => studentsActionsHandler(student.id)}
+              onClick={() =>
+                componentFunc != "show"
+                  ? studentsActionsHandler(student.id)
+                  : navigate(`/alunos/${student.id}`)
+              }
               className="table_body"
               style={{
                 backgroundColor:
