@@ -91,32 +91,36 @@ const PersonalizedTableComponent = ({
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                <Avatar alt="Remy Sharp" src={student.avatar} />
-                {student.name}
+                <div className="profile_name_and_picture">
+                  <Avatar
+                    className="avatar_picture"
+                    style={{
+                      transform: "scale(1.4)",
+                    }}
+                    alt="Remy Sharp"
+                    src={student.avatar}
+                  />
+                  <h3>
+                    <strong>{student.name}</strong>
+                  </h3>
+                </div>
               </TableCell>
               <TableCell align="right">{student.age}</TableCell>
               <TableCell align="right">{student.room}</TableCell>
               {componentFunc == "mark-present" && (
-                <TableCell
-                  align="right"
-                  className="status_column"
-                  style={{
-                    display: "flex",
-                    justifyContent: "end",
-                    border: "1px solid rgba(0,127,255, 0.7)",
-                    height: "80px",
-                  }}
-                >
-                  <Avatar
-                    style={{
-                      width: "60px",
-                      height: "60px",
-                    }}
-                    alt="present-status"
-                    src={
-                      student.present ? imagesLink.present : imagesLink.absent
-                    }
-                  />
+                <TableCell align="right" className="status_column">
+                  <div className="area_status_column">
+                    <Avatar
+                      style={{
+                        width: "60px",
+                        height: "60px",
+                      }}
+                      alt="present-status"
+                      src={
+                        student.present ? imagesLink.present : imagesLink.absent
+                      }
+                    />
+                  </div>
                 </TableCell>
               )}
               {componentFunc == "show" && (

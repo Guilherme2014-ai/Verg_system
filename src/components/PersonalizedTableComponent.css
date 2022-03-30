@@ -1,3 +1,19 @@
+.area_status_column {
+    display: flex;
+    justify-content: end;
+}
+
+.profile_name_and_picture {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px;
+}
+
+.avatar_picture {
+    margin: 8px;
+}
+
 .table_area {
     overflow: hidden;
     overflow-x: hidden;
@@ -20,10 +36,6 @@
 
 .table_body {
     background-color: rgba(0,127,255, 0.7);
-}
-
-.MuiTableCell-body {
-    border: rgba(0,127,255, 0.7);
 }
 
 .MuiTableCell-root {
